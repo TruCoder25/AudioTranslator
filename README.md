@@ -112,10 +112,8 @@ To not get that error we use yt-dlp PACKAGE
 ###### To extract Audio From YOUTUBE URL we use
 ### CODE
       import yt_dlp
-
-# URL of the video you want to download
-video_url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-
+       URL of the video you want to download
+      video_url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
       # Define download options
       ydl_opts = {
           'format': 'best',
@@ -130,7 +128,28 @@ video_url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
 ##### THESE ARE THE STEPS TO CONVERT THE VIDEO TO AUDIO IN DIFFERENT LANGUAGE
 
 
-      
+
+## ERRORS WHILE USING FLASK
+
+###### 1 .  we're having trouble while finding this site
+<br>
+To solve this we should whitlelist that particular domain (This occurs when firewall is blocking this)
+
+###### 2 . Method Not defined
+<br>
+Check you're code ,  we use @app.route('/')
+<br>
+if it is app.route('/') and
+<br>
+@app.route('<foldername>')
+<br>
+
+Change it to the @app.route('/') AS IT SHOULD BE CURRENT DIRECTORY
+
+###### 3 . REQUEST URL NOT DEFINED
+
+if there is no folder name which we are using in app.route then it returns this error
+
 
 
 

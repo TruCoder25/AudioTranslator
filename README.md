@@ -150,7 +150,24 @@ Change it to the @app.route('/') AS IT SHOULD BE CURRENT DIRECTORY
 
 if there is no folder name which we are using in app.route then it returns this error
 
+# OUTPUT
+
+## The UI is like this
+
+![IMG_20240716_222733](https://github.com/user-attachments/assets/3a73f5b7-0a26-46c2-9a3b-80889dac6e1f)
 
 
-
+### Filling the details like the url and giving input language
             
+![IMG_20240716_222532](https://github.com/user-attachments/assets/aedbe229-0f88-4534-80da-f22ec85e3edb)
+
+### Giving The Language To Convert
+
+![IMG_20240716_223538](https://github.com/user-attachments/assets/4d097127-72db-468d-9e7e-c4d59da0ffe6)
+
+
+
+###  THE FINAL OUTPUT AFTER GIVING THE DETAILS
+
+
+![IMG_20240716_222600](https://github.com/user-attachments/assets/a75383e9-08b6-4cc2-b648-f43005028ede)

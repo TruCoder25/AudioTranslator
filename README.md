@@ -102,6 +102,35 @@ Text-to-Speech -- It is used to convert the translated text to the audio
 
 # 4 . EXTRACTING AUDIO FROM YOUTUBE VIDEO (By URL)
 
+We can use pytube but the audio is not extracting correctly as it shows throtling error
+<br>
+To not get that error we use yt-dlp PACKAGE
+
+###### To install yt-dlp package :
+      pip install yt-dlp
+
+###### To extract Audio From YOUTUBE URL we use
+### CODE
+      import yt_dlp
+
+# URL of the video you want to download
+video_url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+
+      # Define download options
+      ydl_opts = {
+          'format': 'best',
+          'outtmpl': 'downloaded_video.%(ext)s',
+      }
+
+      # Download the video
+      with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+      ydl.download([video_url])
+
+
+##### THESE ARE THE STEPS TO CONVERT THE VIDEO TO AUDIO IN DIFFERENT LANGUAGE
+
+
+      
 
 
 

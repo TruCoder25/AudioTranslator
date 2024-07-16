@@ -25,10 +25,10 @@ To transcribe we use whisper (There are many which I used still there is no othe
 
 ### CODE 
 
-import whisper
-model = whisper.load_model("base")
-result = model.transcribe(audio_file_path)
-transcribed_text = result["text"]
-print("Transcribed text:", transcribed_text)
+###### import whisper
+###### model = whisper.load_model("base")
+###### result = model.transcribe(audio_file_path)
+###### transcribed_text = result["text"]
+###### print("Transcribed text:", transcribed_text)
 
 

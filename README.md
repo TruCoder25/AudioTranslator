@@ -8,7 +8,7 @@
 #### 4.FULL STACK
 ####       --html,css,js and Flask(backend)
 
-Main Puropose of this project is to translate a youtube video to different Languages using Whisper
+Main Purpose of this project is to translate a youtube video to different Languages using Whisper
 
 There are few Steps to do this project
 
@@ -25,10 +25,10 @@ To transcribe we use whisper (There are many which I used still there is no othe
 
 ### CODE 
 
-##### import whisper
-##### model = whisper.load_model("base")
-##### result = model.transcribe(audio_file_path)
-##### transcribed_text = result["text"]
-##### print("Transcribed text:", transcribed_text)
+import whisper
+model = whisper.load_model("base")
+result = model.transcribe(audio_file_path)
+transcribed_text = result["text"]
+print("Transcribed text:", transcribed_text)
 
 

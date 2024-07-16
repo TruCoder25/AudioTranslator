@@ -25,10 +25,67 @@ To transcribe we use whisper (There are many which I used still there is no othe
 
 ### CODE 
 
-###### import whisper
-###### model = whisper.load_model("base")
-###### result = model.transcribe(audio_file_path)
-###### transcribed_text = result["text"]
-###### print("Transcribed text:", transcribed_text)
+       import whisper
+       model = whisper.load_model("base")
+       result = model.transcribe(audio_file_path)
+       transcribed_text = result["text"]
+       print("Transcribed text:", transcribed_text)
 
 
+# 2 . Translating Audio 
+
+TRANSLATING -- It is the technique which is used to translate To Specific Language
+
+To Translate we can also use whisper but it cant get accurately 
+<br>
+To Translate I Used Google Translator.To use this we use the Google Cloud API
+<br>
+#### STEPS TO GET GOOGLE CLOUD API
+
+###### 1 . Create a Google Cloud Project:
+Go to the Google Cloud Console.
+<br>
+Create a new project.
+
+###### 2 . Enable the Translation API:
+In the Google Cloud Console, navigate to the API Library.
+<br>
+Search for "Cloud Translation API" and enable it for your project.
+
+###### 3 . Set Up Authentication:
+Create service account credentials:
+<br>
+Go to the "IAM & Admin" > "Service Accounts" page in the Google Cloud Console.
+<br>
+Create a new service account.
+<br>
+Grant it the "Editor" role.
+<br>
+Create a JSON key for the service account and download it.
+
+###### 4 . Upload the JSON Key File to Replit
+
+Upload the JSON key file:
+        In your Replit project, click on the "Files" tab on the left sidebar.
+        Click the "Upload File" button and upload the JSON key file you downloaded.
+
+Set the GOOGLE_APPLICATION_CREDENTIALS environment variable:
+        In the "Secrets" section of your Replit project (found in the left sidebar), add a new secret named GOOGLE_APPLICATION_CREDENTIALS.
+        Set the value to the path of your JSON key file. For example, if your file is named service-account-file.json, set the value to service-account-file.json.
+
+###### To Translate we use some libraries they are :
+      pip install google-cloud-translate
+
+### CODE
+
+      from google.cloud import translate_v2 as translate
+      import os
+      os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'project.json' // update your json file
+      translate_client = translate.Client()
+      translation = translate_client.translate(transcribed_text, target_language='te') //telugu
+      translated_text = translation['translatedText']
+      print("Translated text:", translated_text)
+      
+
+
+            

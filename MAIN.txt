@@ -1,0 +1,7 @@
+The Main Purpose Of this project is to translate the youtube videos to different Languages audio
+
+  In This I The Main Technologies I used is 
+   1 . WHISPER AI 
+   2 . GOOGLE TRANSLATOR 
+   3 . TEXT-TO_SPEECH 
+   4 . FULL STACK (HTML,CSS,JS,FLASK)

@@ -36,32 +36,32 @@ To transcribe we use whisper (There are many which I used still there is no othe
 
 TRANSLATING -- It is the technique which is used to translate To Specific Language
 
-To Translate we can also use whisper but it cant get accurately 
+To Translate we can also use whisper but it wont give accurate results 
 <br>
 To Translate I Used Google Translator.To use this we use the Google Cloud API
 <br>
 #### STEPS TO GET GOOGLE CLOUD API
 
 ###### 1 . Create a Google Cloud Project:
-Go to the Google Cloud Console.
+   Go to the Google Cloud Console.
 <br>
-Create a new project.
+   Create a new project.
 
 ###### 2 . Enable the Translation API:
-In the Google Cloud Console, navigate to the API Library.
+   In the Google Cloud Console, navigate to the API Library.
 <br>
-Search for "Cloud Translation API" and enable it for your project.
+   Search for "Cloud Translation API" and enable it for your project.
 
 ###### 3 . Set Up Authentication:
-Create service account credentials:
+   Create service account credentials:
 <br>
-Go to the "IAM & Admin" > "Service Accounts" page in the Google Cloud Console.
+   Go to the "IAM & Admin" > "Service Accounts" page in the Google Cloud Console.
 <br>
-Create a new service account.
+   Create a new service account.
 <br>
-Grant it the "Editor" role.
+   Grant it the "Editor" role.
 <br>
-Create a JSON key for the service account and download it.
+   Create a JSON key for the service account and download it.
 
 ###### 4 . Upload the JSON Key File to Replit
 
@@ -85,7 +85,24 @@ Set the GOOGLE_APPLICATION_CREDENTIALS environment variable:
       translation = translate_client.translate(transcribed_text, target_language='te') //telugu
       translated_text = translation['translatedText']
       print("Translated text:", translated_text)
-      
+
+# 3 . TEXT TO SPEECH 
+
+Text-to-Speech -- It is used to convert the translated text to the audio
+
+###### To install it we use GOOGLE TEXT TO SPEECH (GTTS)
+
+      pip install gtts
+
+### CODE
+
+      from gtts import gTTS
+      tts = gTTS(translated_text, lang='en')
+      tts.save(translated_audio_path)
+
+# 4 . EXTRACTING AUDIO FROM YOUTUBE VIDEO (By URL)
+
+
 
 
             
